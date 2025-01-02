@@ -91,21 +91,22 @@ export default function JobRow({ jobDoc }: { jobDoc: Job }) {
               </div>
             )}
 
-            <div className="max-w-32 sm:max-w-none">
-              <button
-                className="px-4 py-2 rounded bg-green-600 text-white"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  const shareUrl = `https://wa.me/?text=${encodeURIComponent(
-                    `Check out this job opportunity: ${jobDoc.jobUrl}`
-                  )}`;
-                  window.open(shareUrl, "_blank");
-                }}
-              >
-                <FaWhatsapp className="inline-block mr-2" />
-                Share on Whatsapp
-              </button>
-            </div>
+<div className="max-w-32 sm:max-w-none">
+  <button
+    className="px-4 py-2 rounded bg-green-600 text-white"
+    onClick={(e) => {
+      e.stopPropagation();
+      const shareUrl = `https://wa.me/?text=${encodeURIComponent(
+        `Check out this job opportunity: www.hiringnexus.in/show/${jobDoc._id}`
+      )}`;
+      window.open(shareUrl, "_blank");
+    }}
+  >
+    <FaWhatsapp className="inline-block mr-2" />
+    Share on Whatsapp
+  </button>
+</div>
+
           </div>
         </div>
       </div>
